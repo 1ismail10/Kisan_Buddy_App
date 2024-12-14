@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#4CAF50"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/cropDetailsLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo"
+            android:contentDescription="App Logo"></ImageView>
+<!--            app:tint="@android:color/white" />-->
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/cropDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crop Details"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Input Fields Section -->
+    <LinearLayout
+        android:id="@+id/inputSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cropDetailsLogo"
+        tools:ignore="NotSibling">
+
+        <!-- Crop Name Input -->
+
+        <!-- Crop Quantity Input -->
+
+        <!-- Cost of Cultivation Input -->
+    </LinearLayout>
+
+    <!-- Submit Button -->
+
+    <Button
+        android:id="@+id/submitCropDetailsButton"
+        android:layout_width="338dp"
+        android:layout_height="0dp"
+        android:layout_margin="1dp"
+        android:layout_marginBottom="96dp"
+        android:backgroundTint="#4CAF50"
+        android:fontFamily="sans-serif-medium"
+        android:text="Submit"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="36dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/inputCropName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_field_background"
+        android:fontFamily="sans-serif"
+        android:hint="Enter Crop Name"
+        android:padding="12dp"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="264dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/inputCropQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_field_background"
+        android:fontFamily="sans-serif"
+        android:hint="Enter Crop Quantity (kg)"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="363dp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/inputCropCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_field_background"
+        android:fontFamily="sans-serif"
+        android:hint="Enter Cost of Cultivation (₹)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="472dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
