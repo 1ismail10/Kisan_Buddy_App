@@ -1,0 +1,63 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="6dp"
+    android:padding="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/mandiName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mandi Name"
+            android:textColor="#2D2D2D"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mandiDistrict"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5C5C5C"
+            android:text="District" />
+
+        <TextView
+            android:id="@+id/mandiState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5C5C5C"
+            android:text="State" />
+
+        <TextView
+            android:id="@+id/mandiCropName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5C5C5C"
+            android:text="Crop Name" />
+
+        <TextView
+            android:id="@+id/mandiPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5C5C5C"
+            android:text="Crop Price" />
+
+        <TextView
+            android:id="@+id/mandiProfit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#5C5C5C"
+            android:text="Profit" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
