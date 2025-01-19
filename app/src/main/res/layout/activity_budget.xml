@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".BudgetActivity">
+
+    <!-- Title -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/akaya_telivigala"
+        android:gravity="center"
+        android:paddingTop="32dp"
+        android:paddingBottom="16dp"
+        android:text="Crop Details"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Crop Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutCropName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="#30ffffff"
+        app:boxStrokeColor="#32044A"
+        app:hintTextColor="#32044A"
+        android:textColorHint="#8A8A8A"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cropName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:hint="Crop Name"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Crop Quantity Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutCropQuantity"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="#30ffffff"
+        app:boxStrokeColor="#32044A"
+        app:hintTextColor="#32044A"
+        android:textColorHint="#8A8A8A"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutCropName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cropQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Crop Quantity(quintal)"
+            android:inputType="number"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Crop Cost Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutCropCost"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="#30ffffff"
+        app:boxStrokeColor="#32044A"
+        app:hintTextColor="#32044A"
+        android:textColorHint="#8A8A8A"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutCropQuantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cropCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Crop Cost(per quintal)"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- State Dropdown -->
+    <Spinner
+        android:id="@+id/stateDropdown"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/dropdown_background"
+        android:spinnerMode="dropdown"
+        android:entries="@array/state_array"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutCropCost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Find Nearby Mandis Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/findMandisButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="199dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#40629E"
+        android:text="Find Nearby Mandis"
+        android:textColor="#FBFBFB"
+        app:layout_constraintTop_toBottomOf="@id/stateDropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Farmer Image -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="232dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/farmer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/findMandisButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

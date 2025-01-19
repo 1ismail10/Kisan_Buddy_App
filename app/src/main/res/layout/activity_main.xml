@@ -1,0 +1,246 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <!-- Top Content: LinearLayout containing other views -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/leaf_icon"
+            android:fontFamily="@font/akaya_telivigala"
+            android:gravity="center"
+            android:padding="45dp"
+            android:text="Welcome to KISAN BUDDY"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/baseline_room_24"
+            tools:ignore="RtlSymmetry" />
+
+        <!-- Grey line separator -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="2dp"
+            android:background="#2C2828" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+
+            <!-- Language Icon -->
+            <ImageView
+                android:id="@+id/languageIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Language Icon"
+                android:src="@drawable/language" />
+
+            <!-- Language Spinner -->
+            <Spinner
+                android:id="@+id/languageSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dropdown_background"
+                android:entries="@array/languages"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <!-- Horizontal LinearLayout for images with labels -->
+        <!-- Horizontal LinearLayout containing two rows -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="40dp"
+            android:paddingBottom="10dp">
+
+            <!-- First Row: Profile and Sell Crops -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Vertical LinearLayout for profile image and label -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="144dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/square_solid"
+                        android:padding="14dp"
+                        android:src="@drawable/verified" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Profile"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!-- Vertical LinearLayout for Sell Crops image and label -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivBudget"
+                        android:layout_width="144dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/square_solid"
+                        android:padding="14dp"
+                        android:src="@drawable/budget" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Mandis"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Second Row: History and Logout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <!-- Vertical LinearLayout for History image and label -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivHistory"
+                        android:layout_width="144dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/square_solid"
+                        android:padding="7dp"
+                        android:src="@drawable/history" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="History"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <!-- Vertical LinearLayout for Logout image and label -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/tvAboutUs"
+                        android:layout_width="144dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/square_solid"
+                        android:padding="14dp"
+                        android:src="@drawable/information" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="About Us"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- TextView at the bottom -->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:paddingBottom="15dp">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/icon_about"-->
+<!--            android:contentDescription="About Icon"-->
+<!--            android:layout_marginEnd="8dp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvAboutUs"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="  About US\nVersion 1.0"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:textSize="14sp"-->
+<!--            android:textStyle="normal"-->
+<!--            android:textAppearance="?android:attr/textAppearanceMedium" />-->
+<!--    </LinearLayout>-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ivLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="90dp"
+        android:backgroundTint="#40629E"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="7dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"/>
+
+
+</RelativeLayout>

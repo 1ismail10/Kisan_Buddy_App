@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "710495783683",
+    "project_id": "kisan-buddy-47173",
+    "storage_bucket": "kisan-buddy-47173.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710495783683:android:3dff5b3bb152d81c113736",
+        "android_client_info": {
+          "package_name": "com.example.kisanbuddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAEuLVG0-JGws2Ch4GuxA9SkCBrOcPqkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
